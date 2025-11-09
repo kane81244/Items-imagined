@@ -1,26 +1,98 @@
-#item-details img {
-  max-width: 300px;
-  margin-bottom: 20px;
+/* Reset & basic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+#item-details {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Main title */
 #item-details h2 {
   margin-bottom: 10px;
+  font-size: 26px;
 }
 
-#item-details p {
-  margin: 5px 0;
-}
-body {
-  font-family: "Poppins", sans-serif;
-  background: #dd9efa;
-  margin: 0;
-}
-
-header {
-  background: rgb(192, 111, 199);
-  padding: 15px 25px;
+/* Images container */
+.images-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.images-container img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Description & price */
+#item-details p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.price {
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+/* Contact button */
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2980b9;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.contact-btn:hover {
+  background: #3498db;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #item-details {
+    padding: 15px;
+  }
+  .images-container {
+    justify-content: center;
+  }
+  .images-container img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  #item-details h2 {
+    font-size: 22px;
+  }
+  #item-details p {
+    font-size: 14px;
+  }
+  .images-container img {
+    max-width: 100%;
+  }
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
