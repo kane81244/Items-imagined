@@ -1,0 +1,26 @@
+#item-details img {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+#item-details h2 {
+  margin-bottom: 10px;
+}
+
+#item-details p {
+  margin: 5px 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #dd9efa;
+  margin: 0;
+}
+
+header {
+  background: rgb(192, 111, 199);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
