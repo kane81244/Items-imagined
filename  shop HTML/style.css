@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #c4caff;
+  margin: 0;
+}
+
+header {
+  background: rgb(114, 144, 179);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#search {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.item-card {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.price {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.1em;
+}

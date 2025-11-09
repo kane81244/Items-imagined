@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Denim Jacket",
+    "price": "$25",
+    "condition": "Good",
+    "description": "Classic 90s denim jacket",
+    "images": [
+      "images/jacket1.jpg",
+      "images/jacket2.jpg",
+      "images/jacket3.jpg"
+    ]
+  },
+  {
+    "name": "Leather Bag",
+    "price": "$40",
+    "condition": "Like New",
+    "description": "Handmade leather bag",
+    "images": [
+      "images/bag1.jpg",
+      "images/bag2.jpg"
+    ]
+  }
+]
+
