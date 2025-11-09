@@ -1,24 +1,21 @@
 [
   {
-    "name": "Denim Jacket",
-    "price": "$25",
-    "condition": "Good",
-    "description": "Classic 90s denim jacket",
+    "name": "Blue Jacket",
+    "description": "Warm winter jacket",
+    "price": "$50",
     "images": [
-      "images/jacket1.jpg",
+      "images/jacket1.jpeg",
       "images/jacket2.jpg",
       "images/jacket3.jpg"
     ]
   },
   {
-    "name": "Leather Bag",
-    "price": "$40",
-    "condition": "Like New",
-    "description": "Handmade leather bag",
+    "name": "Red Backpack",
+    "description": "Stylish backpack for daily use",
+    "price": "$30",
     "images": [
       "images/bag1.jpg",
       "images/bag2.jpg"
     ]
   }
 ]
-
