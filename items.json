@@ -5,8 +5,8 @@
     "price": "$50",
     "images": [
       "images/jacket1.jpeg",
-      "images/jacket2.jpg",
-      "images/jacket3.jpg"
+      "images/jacket2.jpeg",
+      "images/jacket3.jpeg"
     ]
   },
   {
@@ -14,8 +14,9 @@
     "description": "Stylish backpack for daily use",
     "price": "$30",
     "images": [
-      "images/bag1.jpg",
-      "images/bag2.jpg"
+      "images/bag1.jpeg",
+      "images/bag2.jpeg",
+      "images/bag3.jpeg"
     ]
   }
 ]
