@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta charset="UTF-8">
-  <title>Item Details</title>
-  <link rel="stylesheet" href="style2.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Item Details - Kane's Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* small overrides for item page layout */
+    main{max-width:920px;margin:20px auto}
+    .viewer{
+      background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    .image-viewer{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
+    .viewer-btn{
+      background:var(--card);border:1px solid #d0d6dc;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:18px
+    }
+    #main-image{width:420px;max-width:85%;height:auto;border-radius:10px;transition:transform .25s}
+    #img-counter{font-size:13px;color:var(--muted);margin-left:8px}
+    .info{margin-top:10px}
+    .contact-btn{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
+    .back-btn{display:inline-block;margin-top:12px;margin-left:8px;padding:10px 14px;background:#7f8c8d;color:#fff;border-radius:8px;text-decoration:none}
+    @media(max-width:600px){#main-image{width:100%}}
+  </style>
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1>Item Details</h1>
   </header>
 
-  <section id="item-details" style="padding: 20px;">
-    <p>Loading...</p>
-  </section>
+  <main>
+    <section class="viewer" id="viewer">
+      <div class="image-viewer">
+        <button id="prev-btn" class="viewer-btn">◀</button>
+        <img id="main-image" src="" alt="Item image">
+        <button id="next-btn" class="viewer-btn">▶</button>
+        <span id="img-counter"></span>
+      </div>
+
+      <div class="info">
+        <h2 id="item-title">Loading...</h2>
+        <p id="item-description"></p>
+        <p class="price" id="item-price"></p>
+
+        <a id="call-btn" class="contact-btn" href="tel:+923001234567">Call to Buy: +923001234567</a>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+      </div>
+    </section>
+  </main>
 
   <script src="item.js"></script>
 </body>
 </html>
-

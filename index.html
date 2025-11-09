@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta charset="UTF-8">
-  <title>Kane Thrift Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kane’s Thrift Shop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Kane Thrift Shop 🧥</h1>
-    <input type="text" id="search" placeholder="Search item...">
+  <div class="aurora-bg"></div>
+
+  <header class="site-header">
+    <h1>Kane’s Thrift Shop</h1>
+    <div class="controls">
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+      </select>
+      <input id="search-bar" type="search" placeholder="Search items..." />
+    </div>
   </header>
 
-  <section id="items-list"></section>
+  <main>
+    <section id="items-list" class="items-grid">
+      <!-- Items injected by script.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with ♥ by Kane — demo thrift site</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-

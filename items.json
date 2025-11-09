@@ -3,6 +3,7 @@
     "name": "Blue Jacket",
     "description": "Warm winter jacket",
     "price": "$50",
+    "category": "Clothing",
     "images": [
       "images/jacket1.jpeg",
       "images/jacket2.jpeg",
@@ -13,10 +14,12 @@
     "name": "Red Backpack",
     "description": "Stylish backpack for daily use",
     "price": "$30",
+    "category": "Bags",
     "images": [
       "images/bag1.jpeg",
       "images/bag2.jpeg",
       "images/bag3.jpeg"
+
     ]
   }
 ]
