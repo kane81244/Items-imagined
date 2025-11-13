@@ -3,6 +3,8 @@
     "name": "Blue Jacket",
     "description": "Warm winter jacket",
     "price": "$50",
+    "condition": "Used",
+    "color": "Blue",
     "category": "Clothing",
     "images": [
       "images/jacket1.jpeg",
@@ -11,15 +13,15 @@
     ]
   },
   {
-    "name": "Red Backpack",
-    "description": "Stylish backpack for daily use",
-    "price": "$30",
-    "category": "Bags",
+    "name": "Red Sneakers",
+    "description": "Comfortable casual sneakers",
+    "price": "$25",
+    "condition": "New",
+    "color": "Red",
+    "category": "Shoes",
     "images": [
-      "images/bag1.jpeg",
-      "images/bag2.jpeg",
-      "images/bag3.jpeg"
-
+      "images/sneaker1.jpeg",
+      "images/sneaker2.jpeg"
     ]
   }
 ]

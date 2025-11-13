@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Item Details - Kane's Shop</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* small overrides for item page layout */
-    main{max-width:920px;margin:20px auto}
-    .viewer{
-      background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);
-    }
-    .image-viewer{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px}
-    .viewer-btn{
-      background:var(--card);border:1px solid #d0d6dc;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:18px
-    }
-    #main-image{width:420px;max-width:85%;height:auto;border-radius:10px;transition:transform .25s}
-    #img-counter{font-size:13px;color:var(--muted);margin-left:8px}
-    .info{margin-top:10px}
-    .contact-btn{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none}
-    .back-btn{display:inline-block;margin-top:12px;margin-left:8px;padding:10px 14px;background:#7f8c8d;color:#fff;border-radius:8px;text-decoration:none}
-    @media(max-width:600px){#main-image{width:100%}}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details</title>
+  <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>Item Details</h1>
-  </header>
+  <div class="container">
+    <button onclick="window.location='index.html'" class="back-btn">← Back to Home</button>
+    <div id="item-details">
+      <h2 id="item-title">Loading...</h2>
 
-  <main>
-    <section class="viewer" id="viewer">
       <div class="image-viewer">
-        <button id="prev-btn" class="viewer-btn">◀</button>
+        <button id="prev-btn">◀</button>
         <img id="main-image" src="" alt="Item image">
-        <button id="next-btn" class="viewer-btn">▶</button>
-        <span id="img-counter"></span>
+        <button id="next-btn">▶</button>
       </div>
 
-      <div class="info">
-        <h2 id="item-title">Loading...</h2>
+      <p class="price" id="item-price"></p>
+      <button id="call-btn">📞 Call to Buy</button>
+
+      <section class="product-details" id="product-details">
+        <h3> Product Details</h3>
+        <table id="details-table"></table>
+      </section>
+
+      <section class="description-section" id="description-section">
+        <h3> Description</h3>
         <p id="item-description"></p>
-        <p class="price" id="item-price"></p>
+      </section>
+    </div>
+  </div>
+  <!-- Message Seller Form -->
+<section id="message-box">
+  <h2>Message Seller</h2>
+  <form id="contact-form" action="https://formspree.io/f/mzzyzjjd" method="POST">
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-        <a id="call-btn" class="contact-btn" href="tel:+923001234567">Call to Buy: +923001234567</a>
-        <a href="index.html" class="back-btn">← Back to Home</a>
-      </div>
-    </section>
-  </main>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required placeholder="Type your message..."></textarea>
+
+    <button type="submit" class="send-btn">Send via Email</button>
+    <a href="#" id="whatsapp-link" class="whatsapp-btn" target="_blank">Message on WhatsApp</a>
+  </form>
+</section>
+<script>
+  const form = document.getElementById('contact-form');
+  const whatsappLink = document.getElementById('whatsapp-link');
+  const phoneNumber = "+923001234567"; // replace with your WhatsApp number
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("Message sent successfully! 📩");
+      form.reset();
+    } else {
+      alert("Oops! Something went wrong 😅");
+    }
+  });
+
+  form.addEventListener('input', () => {
+    const message = document.getElementById('message').value;
+    whatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  });
+</script>
+
 
   <script src="item.js"></script>
 </body>

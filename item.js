@@ -1,71 +1,56 @@
-// item.js
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(location.search);
-  const id = parseInt(params.get("id") || "0", 10);
+const params = new URLSearchParams(window.location.search);
+const itemId = params.get("id");
 
-  const titleEl = document.getElementById("item-title");
-  const descEl = document.getElementById("item-description");
-  const priceEl = document.getElementById("item-price");
-  const mainImg = document.getElementById("main-image");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-  const counterEl = document.getElementById("img-counter");
-  const callBtn = document.getElementById("call-btn");
+fetch("items.json")
+  .then(res => res.json())
+  .then(items => {
+    const item = items[itemId];
+    if (!item) return;
 
-  let images = [];
-  let current = 0;
+    // Set Title, Price, and Description
+    document.getElementById("item-title").textContent = item.name || "Unnamed Item";
+    document.getElementById("item-price").textContent = item.price || "";
+    document.getElementById("item-description").textContent = item.description || "No description available.";
 
-  function fetchItems(){
-    return fetch("items.json").then(r=>{
-      if(!r.ok) throw new Error("items.json not found");
-      return r.json();
-    });
-  }
+    // Call button (add your number here)
+    const callBtn = document.getElementById("call-btn");
+    callBtn.onclick = () => {
+      window.location.href = "tel:+1234567890"; // replace with your real number
+    };
 
-  function updateView(item){
-    titleEl.textContent = `Item ${id+1}: ${item.name}`;
-    descEl.textContent = item.description || "";
-    priceEl.textContent = item.price || "";
-    images = item.images && item.images.length ? item.images : ["images/placeholder.jpg"];
-    current = 0;
-    setImage();
-  }
+    // Image slider logic
+    const images = item.images || [];
+    let current = 0;
+    const mainImage = document.getElementById("main-image");
+    if (images.length > 0) {
+      mainImage.src = images[0];
+    }
+    document.getElementById("prev-btn").onclick = () => {
+      current = (current - 1 + images.length) % images.length;
+      mainImage.src = images[current];
+    };
+    document.getElementById("next-btn").onclick = () => {
+      current = (current + 1) % images.length;
+      mainImage.src = images[current];
+    };
 
-  function setImage(){
-    mainImg.style.opacity = 0;
-    setTimeout(()=> {
-      mainImg.src = images[current];
-      mainImg.style.opacity = 1;
-    }, 120);
-    counterEl.textContent = `${current+1} / ${images.length}`;
-  }
+    // Product details table (only main fields)
+    const details = {
+      "Name": item.name,
+      "Price": item.price,
+      "Condition": item.condition,
+      "Color": item.color,
+      "Category": item.category
+    };
 
-  prevBtn.addEventListener("click", ()=> {
-    current = (current - 1 + images.length) % images.length;
-    setImage();
-  });
-  nextBtn.addEventListener("click", ()=> {
-    current = (current + 1) % images.length;
-    setImage();
-  });
-
-  // load data
-  fetchItems()
-    .then(items => {
-      const item = items[id];
-      if (!item) {
-        titleEl.textContent = "Item not found";
-        descEl.textContent = "";
-        priceEl.textContent = "";
-        return;
+    const table = document.getElementById("details-table");
+    for (const key in details) {
+      if (details[key]) {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${key}</td><td>${details[key]}</td>`;
+        table.appendChild(row);
       }
-      // Optionally replace number in call link; user will update number in code
-      // callBtn.href = "tel:+923001234567";
-      updateView(item);
-    })
-    .catch(err => {
-      titleEl.textContent = "Error loading item";
-      descEl.textContent = err.message;
-      console.error(err);
-    });
-});
+    }
+
+  })
+  .catch(err => console.error("Error loading items:", err));
