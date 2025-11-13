@@ -23,5 +23,18 @@
       "images/sneaker1.jpeg",
       "images/sneaker2.jpeg"
     ]
+  }, 
+  {
+    "name": "red backpack",
+    "description": "a durable backpack",
+    "price": "$25",
+    "condition": "New",
+    "color": "Red",
+    "size":"medium",
+    "category": "wearables",
+    "images": [
+      "images/bag1.jpeg",
+      "images/bag2.jpeg"
+    ]
   }
 ]
