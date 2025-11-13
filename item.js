@@ -4,6 +4,27 @@ const itemId = params.get("id");
 fetch("items.json")
   .then(res => res.json())
   .then(items => {
+    // WhatsApp button logic
+const whatsappBtn = document.getElementById("whatsapp-btn");
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", () => {
+    const phone = "923342024091"; // <-- replace with your actual number (no +, no spaces)
+    const message = encodeURIComponent(
+      `Hey! I'm interested in your item: ${item.name} (${item.price}) from your thrift shop.`
+    );
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  });
+}
+// WhatsApp link logic
+const whatsappLink = document.getElementById("whatsapp-link");
+if (whatsappLink) {
+  const phone = "923342024091"; // replace with your number (no + sign)
+  const message = encodeURIComponent(
+    `Hey! I'm interested in your item: ${item.name} (${item.price}) from your thrift shop.`
+  );
+  whatsappLink.href = `https://wa.me/${phone}?text=${message}`;
+}
+
     const item = items[itemId];
     if (!item) return;
 
@@ -53,4 +74,6 @@ fetch("items.json")
     }
 
   })
+  
   .catch(err => console.error("Error loading items:", err));
+  

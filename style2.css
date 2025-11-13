@@ -160,3 +160,66 @@ body {
 #contact-form .whatsapp-btn:hover {
   opacity: 0.8;
 }
+.image-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+#prev-btn, #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#prev-btn { left: 10px; }
+#next-btn { right: 10px; }
+
+.contact-buttons {
+  margin-top: 20px;
+}
+
+#whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.message-box {
+  margin-top: 30px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.message-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-box input,
+.message-box textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
