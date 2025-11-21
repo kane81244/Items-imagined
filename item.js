@@ -11,12 +11,27 @@ fetch("items.json")
     // Set Title, Price, and Description
     document.getElementById("item-title").textContent = item.name || "Unnamed Item";
     document.getElementById("item-price").textContent = item.price || "";
-    document.getElementById("item-description").textContent = item.description || "No description available.";
+// Load long description from .txt file
+if (item.description_file) {
+  fetch("descriptions/" + item.description_file)
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById("item-description").textContent = text;
+    })
+    .catch(() => {
+      document.getElementById("item-description").textContent =
+        "No description available.";
+    });
+} else {
+  document.getElementById("item-description").textContent =
+    "No description available.";
+}
+
 
     // Call button (add your number here)
     const callBtn = document.getElementById("call-btn");
     callBtn.onclick = () => {
-      window.location.href = "tel:+1234567890"; // replace with your real number
+      window.location.href = "tel:+9334204091"; // replace with your real number
     };
 
     // Image slider logic

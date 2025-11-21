@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="card-thumb"><img src="${thumb}" alt="${escapeHtml(item.name)}"></div>
         <div class="card-body">
           <h3>${escapeHtml(item.name)}</h3>
-          <p>${escapeHtml(item.description || "")}</p>
+          <p>${escapeHtml(item.description_short || "")}</p>
           <div class="card-row">
             <div class="price">${escapeHtml(item.price || "")}</div>
             <div class="muted">${escapeHtml(item.category || "")}</div>

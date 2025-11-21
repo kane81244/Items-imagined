@@ -1,40 +1,36 @@
 [
   {
-    "name": "Blue Jacket",
-    "description": "Warm winter jacket",
-    "price": "$50",
+    "name": "Nike Joyride",
+    "description_short": "Bead Technology Running Shoes-Adaptive Support",
+    "description_file":"shoejoy.txt",
+    "price": "Rs.6000",
     "condition": "Used",
-    "color": "Blue",
-    "category": "Clothing",
+    "color": "Black-Grenish",
+    "category": "Footware",
     "images": [
-      "images/jacket1.jpeg",
-      "images/jacket2.jpeg",
-      "images/jacket3.jpeg"
+      "images/shoejoy1.png",
+      "images/shoejoy2.jpeg",
+      "images/shoejoy3.jpeg",
+      "images/shoejoy4.jpeg",
+      "images/shoejoy5.jpeg",
+      "images/shoejoy6.jpeg"
+      
     ]
   },
   {
     "name": "Red Sneakers",
-    "description": "Comfortable casual sneakers",
-    "price": "$25",
-    "condition": "New",
-    "color": "Red",
-    "category": "Shoes",
+    "description_short": "Comfortable casual sneakers",
+    "description_file":  "airzoom.txt",
+    "price": "Rs14000",
+    "condition": "used",
+    "color": "Orange-black",
+    "category": "Footware",
     "images": [
-      "images/sneaker1.jpeg",
-      "images/sneaker2.jpeg"
-    ]
-  }, 
-  {
-    "name": "red backpack",
-    "description": "a durable backpack",
-    "price": "$25",
-    "condition": "New",
-    "color": "Red",
-    "size":"medium",
-    "category": "wearables",
-    "images": [
-      "images/bag1.jpeg",
-      "images/bag2.jpeg"
+      "images/airzoom1.png",
+      "images/airzoom2.jpeg",
+      "images/airzoom3.jpeg",
+      "images/airzoom4.jpeg",
+      "images/airzoom5.jpeg" 
     ]
   }
 ]
