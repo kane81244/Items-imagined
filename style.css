@@ -127,4 +127,21 @@ body{
   max-width: 1000px;
   text-align: center;
 }
+.fixed-ad-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 2px solid #ddd;
+  padding: 8px 0;
+  text-align: center;
+  z-index: 9999;
+}
+.fixed-ad-bottom iframe,
+.fixed-ad-bottom img {
+  max-width: 100%;
+  height: auto;
+}
+
 
