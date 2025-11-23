@@ -32,5 +32,22 @@
       "images/airzoom4.jpeg",
       "images/airzoom5.jpeg" 
     ]
+  },
+
+  {
+    "name": "Red Sneakers",
+    "description_short": "Responsive cushioning with a breathable, snug fit for fast runs.",
+    "description_file":  "falfa.txt",
+    "price": "Rs14000",
+    "condition": "used",
+    "color": "Orange-black",
+    "category": "Footware",
+    "images": [
+      "images/airzoom1.png",
+      "images/airzoom2.jpeg",
+      "images/airzoom3.jpeg",
+      "images/airzoom4.jpeg",
+      "images/airzoom5.jpeg" 
+    ]
   }
 ]
