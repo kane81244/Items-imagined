@@ -8,12 +8,12 @@
     "color": "Black-Grenish",
     "category": "Footware",
     "images": [
-      "images/shoejoy1.png",
-      "images/shoejoy2.jpeg",
-      "images/shoejoy3.jpeg",
-      "images/shoejoy4.jpeg",
-      "images/shoejoy5.jpeg",
-      "images/shoejoy6.jpeg"
+      "images/joyride/shoejoy1.png",
+      "images/joyride/shoejoy2.jpeg",
+      "images/joyride/shoejoy3.jpeg",
+      "images/joyride/shoejoy4.jpeg",
+      "images/joyride/shoejoy5.jpeg",
+      "images/joyride/shoejoy6.jpeg"
       
     ]
   },
@@ -21,33 +21,61 @@
     "name": "Red Sneakers",
     "description_short": "Responsive cushioning with a breathable, snug fit for fast runs.",
     "description_file":  "airzoom.txt",
-    "price": "Rs14000",
+    "price": "Rs.2000",
     "condition": "used",
     "color": "Orange-black",
     "category": "Footware",
     "images": [
-      "images/airzoom1.png",
-      "images/airzoom2.jpeg",
-      "images/airzoom3.jpeg",
-      "images/airzoom4.jpeg",
-      "images/airzoom5.jpeg" 
+      "images/airzoom/airzoom1.png",
+      "images/airzoom/airzoom2.jpeg",
+      "images/airzoom/airzoom3.jpeg",
+      "images/airzoom/airzoom4.jpeg",
+      "images/airzoom/airzoom5.jpeg" 
     ]
   },
 
   {
-    "name": "Red Sneakers",
-    "description_short": "Responsive cushioning with a breathable, snug fit for fast runs.",
-    "description_file":  "falfa.txt",
+    "name": "Retro Wireless In-Ear Headset",
+    "description_short": "High Quality Sports TWS Earbuds Gear Noise Reduction",
+    "description_file":  "headset1.txt",
     "price": "Rs14000",
-    "condition": "used",
-    "color": "Orange-black",
-    "category": "Footware",
+    "condition": "New",
+    "color": "light-Orange, light Green, Beige  ",
+    "category": "Headsets",
     "images": [
-      "images/airzoom1.png",
-      "images/airzoom2.jpeg",
-      "images/airzoom3.jpeg",
-      "images/airzoom4.jpeg",
-      "images/airzoom5.jpeg" 
+      "images/headset1/sd.jpeg",
+      "images/headset1/sd1.jpeg",
+      "images/headset1/sd2.jpeg",
+      "images/headset1/sd3.jpeg",
+      "images/headset1/sd4.jpeg",
+      "images/headset1/sd5.jpeg",
+      "images/headset1/sd6.jpeg",
+      "images/headset1/sd7.jpeg",
+      "images/headset1/sd8.jpeg",
+      "images/headset1/sd9.jpeg"
+
+    ]
+  },
+  {
+    "name": "FHRM's Noise-Cancelling, PS4,PS5 Gaming Headset",
+    "description_short": "High Quality Sports TWS Earbuds Gear Noise Reduction",
+    "description_file":  "headset2.txt",
+    "price": "Rs14000",
+    "condition": "New",
+    "color": "light-Orange, light Green, Beige  ",
+    "category": "Headsets",
+    "images": [
+      "images/headset2/1.jpeg",
+      "images/headset2/2.jpeg",
+     "images/headset2/3.jpeg",
+     "images/headset2/4.jpeg",
+     "images/headset2/5.jpeg",
+     "images/headset2/6.jpeg",
+     "images/headset2/7.jpeg",
+     "images/headset2/8.jpeg",
+     "images/headset2/9.jpeg",
+    "images/headset2/10.jpeg"
     ]
   }
+
 ]
